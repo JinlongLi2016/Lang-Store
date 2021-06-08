@@ -1,0 +1,17 @@
+# g++ test.cpp --save-temps  
+// 保存test编译过程中产生的各文件
+# more     //命令more查看文件
+   -Wall     //加WALL选项，输出显示所有的警告
+一个.h文件只放一个类的声明
+
+
+#include是编译预处理，文本的插入；
+extern用来声明变量；
+函数原型；
+类的声明；
+xx.h在当前目录找；
+<xx.h>在编译器头文件找；
+
+
+1 .h文件里面最好不要定义，而是用作声明，因为当链接多个含有该.h的.cpp文件时，会出现重复定义的情况.
+2.如果一个.cpp文件里面多次include了.h文件，a.h文件里include了b.h，一个.cpp里面include了b.h又有a.h，且b.h里面出现定义，可以用预处理里面的ifndef endif 控制不出现重复定义的情况。

@@ -1,0 +1,10 @@
+* local variable
+
+* Fields（成员变量/字段）, papameters（参数）, local variables
+字段是定义在 构造器和方法之外
+
+
+
+类的声明
+
+类的定义
