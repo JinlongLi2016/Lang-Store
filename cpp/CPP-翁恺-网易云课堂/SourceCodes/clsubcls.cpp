@@ -4,7 +4,7 @@ using namespace std;
 class Employee{
 private:
 	int x;
-	
+
 public:
 	Employee( const std::string& name,
 			const std::string& ssn );
@@ -16,7 +16,7 @@ protected:
 };
 
 
-Employee::Employee(const std::string& name, 
+Employee::Employee(const std::string& name,
 		const std::string& ssn)
 {
 	m_name = name;
@@ -31,7 +31,7 @@ int main()
 	for(i=0; i<10; i++)
 	{
 		cout << x<< endl;
-	
+
 	}
 	Employee e("jack", "231");
 	return 0;
