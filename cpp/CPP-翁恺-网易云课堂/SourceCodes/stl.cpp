@@ -2,8 +2,10 @@
 // map/vector/list pair class
 #include <vector>
 #include <list>
+#include <map>
 #include <string>
 using namespace std;
+
 
 int main(){
 	std::vector<int> x;
@@ -26,4 +28,11 @@ int main(){
 			p_list!=s.end(); p_list++)
 		cout<<*p_list<<" ";
 	cout<<endl;
+
+	map<string, int> m =  { {"CPU", 10}, {"GPU", 15}, {"RAM", 20}, };
+	cout << m["CPU"] <<endl;
+	m["GPU"] = 100;
+	cout << m["GPU"] <<endl;
+
 }
+
