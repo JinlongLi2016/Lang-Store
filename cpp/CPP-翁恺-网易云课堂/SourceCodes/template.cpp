@@ -17,8 +17,8 @@ void swap(T& x, T& y){
 int main(){
         int a, b;
         a = 1; b = 2;
-        std:cout << "a = " << a << "b = " << b << std::endl;
-        swap(a, b)
+        std::cout << "a = " << a << "b = " << b << std::endl;
+        swap(a, b);
         std::cout << "Atfer swap()" << std::endl;
         std::cout << "a = " << a << "b = " << b << std::endl;
 
@@ -40,3 +40,38 @@ int main(){
 // template < class T >
 // void foo( void ) {}
 // foo<int> (); // type T is int
+
+// 类模板
+template<class T>
+class Vector
+{
+private:
+        private m_size;
+        private m_elements;
+public:
+        Vector(int);
+        ~Vector();
+        Vector& operator=(const Vector&);
+        T& operator[] (int);
+};
+template<class T>
+Vector<T>::Vector(int size): m_size(size)
+{
+}
+template<class T>
+Vector<T>::~Vector()
+{
+}
+
+template<class T>
+T& Vector<T>::operator[] (int idx)
+{
+        if (idx < m_size and idx >=0){
+                return m_elements[idx];
+        }
+}
+/* 每个成员函数前面都有 template <class T> 这一部分，
+用以表明这是一个 类模板 vector<T> 的成员函数，且定义T为类型参数（代表未知类型）。*/
+// usage
+Vector<int> vec_int(100);
+Vector<complex> vec_com(200);

@@ -38,3 +38,20 @@ int Date::get_day() const{
 // 	在声明和定义处均需要在参数后跟上const关键字
 // 	不修改数据的函数成员应该被声明为const
 // 	常成员函数对常对象比较安全
+
+// 常数据成员 必须在初始化列表中进行初始化
+
+// * Compile-time constants
+// class HasArray {
+// 	const int size;
+// 	int arr[size]; // errorX
+// }
+class HasArray {
+	static const int size = 100;
+	int arr[size]; // errorX solution1
+};
+class HasArray2
+{
+	enum { size = 100};
+	int arr[size]; // errorX solution2
+};
