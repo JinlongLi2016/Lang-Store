@@ -6,7 +6,12 @@
 #include <string>
 using namespace std;
 
-
+/* 基本数据结构如何实现以下几个目的
+1. 实例化
+2. 添加元素
+3. 删除
+4. 访问 & 遍历
+*/
 int main(){
 	std::vector<int> x;
 	for(int a=0; a<100; a++)
