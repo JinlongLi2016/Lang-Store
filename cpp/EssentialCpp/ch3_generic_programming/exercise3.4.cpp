@@ -24,13 +24,17 @@ int main(void){
     //     numbers.push_back(anumber);
     // }
     for(auto n: numbers){
-        cout << n << " ";
+        cout << n << " - " << n % 2 <<"\n";
     }
     cout << "\n";
     for(auto number: numbers){
-        if(anumber % 2 < 0.5){
+        cout << number % 2 << " ";
+        if (number % 2 < 0.5)
+        {
             even_ns.push_back(number);
-        }else{
+        }
+        else
+        {
             odd_ns.push_back(number);
         }
     }
